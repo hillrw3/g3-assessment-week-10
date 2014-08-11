@@ -1,4 +1,4 @@
-<h2>New gif</h2>
+<h1>New gif</h1>
 
 <% if @gif.errors.present? %>
   <div class="errors">
@@ -11,13 +11,11 @@
 <%= form_for @gif do |f| %>
 
   <%= f.label :url, "URL" %>
-  <%= f.text_field :url %>
-  <br>
+  <%= f.text_field :url %><div class="errors"><%= @gif.errors.messages[:url].first if @gif.errors.messages[:url].present? %></div>
+  <br><br>
   <%= f.label :title %>
-  <%= f.text_field :title %>
-
-  <br>
-
+  <%= f.text_field :title %><div class="errors"><%= @gif.errors.messages[:title].first if @gif.errors.messages[:title].present? %></div>
+  <br><br>
   <%= f.submit %>
 
 <% end %>

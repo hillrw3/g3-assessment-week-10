@@ -1,16 +1,21 @@
-<h2>Welcome</h2>
+<h1>Welcome</h1>
+<% if flash[:notice] %>
+  <div class='green-background'><%= flash[:notice] %></div>
+<% end %>
 
-<%= flash[:notice] if flash[:notice] %>
 <br>
 <a href="/about">About</a>
-<br><br>
+<br>
 <a href="/gifs/new">New gif</a>
+
+<br><br>
 
 <% if @gifs != nil %>
   <ul>
     <% @gifs.each do |gif| %>
       <li><img src="<%= gif.url %>"></li>
       <li><h3><%= gif.title %></h3></li>
+      <br><br>
     <% end %>
   </ul>
 <% end %>

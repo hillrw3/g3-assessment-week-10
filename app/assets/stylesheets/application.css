@@ -1,4 +1,31 @@
-.errors {
-    color: red;
+* {
+    font-family: Arial;
 }
 
+.wrapper {
+    width: 65%;
+    margin: auto;
+}
+
+.errors {
+    color: red;
+    display: inline;
+}
+
+.field_with_errors {
+    display: inline;
+}
+
+.field_with_errors input {
+    border: 1px solid red;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.green-background {
+    background-color: limegreen;
+    height: 40px;
+}
