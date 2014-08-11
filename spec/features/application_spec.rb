@@ -6,4 +6,10 @@ feature "Applcation" do
 
     expect(page).to have_content "Welcome"
   end
+
+  scenario "user can visit about page" do
+    visit '/'
+    click_on "About"
+    expect(page).to have_content("Not much to say here.")
+  end
 end
