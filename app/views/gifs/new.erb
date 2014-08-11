@@ -1,0 +1,23 @@
+<h2>New gif</h2>
+
+<% if @gif.errors.present? %>
+  <div class="errors">
+    <% @gif.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  </div>
+<% end %>
+
+<%= form_for @gif do |f| %>
+
+  <%= f.label :url, "URL" %>
+  <%= f.text_field :url %>
+  <br>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <br>
+
+  <%= f.submit %>
+
+<% end %>
